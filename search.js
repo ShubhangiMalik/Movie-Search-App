@@ -16,13 +16,17 @@ function fetchingData(userInput) {
     fetch('http://www.omdbapi.com/?apikey=56d64f03&s=' + userInput)
     .then((response) => { 
         response.json().then((data) => {
-        for(var i=0;i<10;i++){
+        if((data.Response)!== "False"){
+        for(var i=0;i<data.Search.length;i++){
             movie[i].textContent = data.Search[i].Title
             image[i].src=data.Search[i].Poster
             year[i].textContent = data.Search[i].Year
             type[i].textContent = data.Search[i].Type
         }
-        
+      }else{
+        content.classList.add("hide")
+        again.innerHTML= "No Results Found!<br><b>Search Again</b>"
+      }
            
         }).catch((err) => {
             console.log(err);
