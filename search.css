@@ -1,0 +1,22 @@
+.hide{
+    display: none;
+  }
+
+.container{
+    text-align: center;
+    
+}
+
+.styleButtons{
+  box-shadow: 0 8px 6px -6px gray;
+  margin-left: 10px;
+}
+
+.styleButtons:hover{
+  box-shadow: none;
+}
+
+#userInput{
+  height: 45px;
+  padding: 5px;;
+}
