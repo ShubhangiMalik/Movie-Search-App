@@ -13,7 +13,7 @@ var again=document.querySelector("#again")
 
 function fetchingData(userInput) {
     var userInput =document.querySelector("#userInput").value
-    fetch('http://www.omdbapi.com/?apikey=56d64f03&s=' + userInput)
+    fetch('https://www.omdbapi.com/?apikey=56d64f03&s=' + userInput)
     .then((response) => { 
         response.json().then((data) => {
         if((data.Response)!== "False"){
